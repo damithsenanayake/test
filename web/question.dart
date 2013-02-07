@@ -10,8 +10,9 @@ class question{
   var c_ans;
   var ans_exps=new Map();
   int topic;
+  bool done;
   
-  question(qn,qt,qe,ans,cans,anex,tp){
+  question(qn,qt,qe,ans,cans,anex,tp,bool d){
     this.qus_txt=qt;
     this.qus_exp=qe;
     this.answers=ans;
@@ -19,6 +20,7 @@ class question{
     this.ans_exps=anex;
     this.topic=tp;
     this.quNum=qn;
+    this.done=d;
   }
   
   bool check_ans(value){

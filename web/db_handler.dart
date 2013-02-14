@@ -1,4 +1,4 @@
-import 'package:mongo_dart/lib/mongo_dart.dart';
+import 'package:mongo_dart/mongo_dart.dart';
 
 main(){
   Db db = new Db("mongodb://127.0.0.1/helloworld");

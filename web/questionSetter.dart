@@ -1,10 +1,11 @@
 library elearn;
 
-import 'package:mongo_dart/lib/mongo_dart.dart';
+import 'package:mongo_dart/mongo_dart.dart';
 //import 'package:json/json.dart';
 import 'questionloader.dart';
-import 'package:json/json_object.dart';
-import "dart:json";
+import 'package:json_object';
+import 'dart:json';
+//import "dart:json";
 class questionSetter{
   
   questionSetter(){
@@ -19,16 +20,26 @@ class questionSetter{
   
 }
 
-main(){
- // new questionSetter();
-  questionloader ql=new questionloader();
+class person{
   
-  Map qmap=ql.questions;
-  //var json= json(qmap);
-  var basic = qmap;
-  //objectToString(qmap);
-  //objectToJson(basic).then((jsonStr) => print(jsonStr));  print(stringify(qmap));
-  print(JSON.json(qmap));
+  String name;
+  String index;
+  
+  person(){
+    name="hello";
+    index= "1110";
+  }
+  
+}
+main(){
+ print("bp1");
+  person p=new person();
+  print("bp2");
+  try{
+   print(stringify(p));
+  }catch( e){
+    e.printStackTrace();
+  }
   print ("done");
   
 }
